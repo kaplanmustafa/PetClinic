@@ -36,6 +36,18 @@ public class Owner {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	
+
+	public Set<Pet> getPets() {
+		return pets;
+	}
+
+	public void setPets(Set<Pet> pets) {
+		this.pets = pets;
+	}
+
+	@Override
+	public String toString() {
+		return "Owner [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + "]";
+	}
 	
 }

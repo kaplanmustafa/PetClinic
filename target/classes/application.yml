@@ -1,0 +1,4 @@
+logging:
+  level:
+    org.springframework.web: debug #off - fatal - error - warn - info - debug - trace
+  file: petclinic.log #log dosyası istenilen dizinde oluştuurlabilir

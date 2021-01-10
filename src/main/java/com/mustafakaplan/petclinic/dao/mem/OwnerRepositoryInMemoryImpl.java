@@ -22,8 +22,8 @@ public class OwnerRepositoryInMemoryImpl implements OwnerRepository {
 		for(int i=0; i<10; i++) {
 			Owner owner = new Owner();
 			owner.setId((long) (i+1));
-			owner.setFirstName("Ad" + i+1);
-			owner.setLastName("Soyad" + i+1);
+			owner.setFirstName("Ad" + (i+1));
+			owner.setLastName("Soyad" + (i+1));
 			
 			ownersMap.put(owner.getId(), owner);
 		}

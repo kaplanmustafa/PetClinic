@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>OWNERS</title>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<td>ID</td>
+					<td>First Name</td>
+					<td>Last Name</td>
+				</tr>
+			</thead>
+			<th:block th:each="owner:${owners}">
+				<tr>
+					<td th:text="${owner.id}" />
+					<td th:text="${owner.firstName}" />
+					<td th:text="${owner.lastName}" />
+				</tr>
+			</th:block>
+		</table>
+	</body>
+</html>

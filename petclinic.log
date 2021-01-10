@@ -425,3 +425,6 @@
 2021-01-10 14:41:08.818 DEBUG 7632 --- [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/index.html] is: -1
 2021-01-10 14:41:08.824 DEBUG 7632 --- [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
 2021-01-10 14:41:08.824 DEBUG 7632 --- [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2021-01-10 14:48:28.138  INFO 7632 --- [RMI TCP Connection(27)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-01-10 14:48:28.140  INFO 7632 --- [RMI TCP Connection(27)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@24e2c7d5: startup date [Sun Jan 10 14:24:22 TRT 2021]; root of context hierarchy
+2021-01-10 14:48:28.144  INFO 7632 --- [RMI TCP Connection(27)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown

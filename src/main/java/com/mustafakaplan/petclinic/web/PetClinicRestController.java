@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.mustafakaplan.petclinic.exception.InternalServerException;
 import com.mustafakaplan.petclinic.exception.OwnerNotFoundException;
 import com.mustafakaplan.petclinic.model.Owner;
 import com.mustafakaplan.petclinic.service.PetClinicService;
@@ -63,9 +64,9 @@ public class PetClinicRestController {
 			
 			return ResponseEntity.ok().build();
 		} catch (OwnerNotFoundException e) {
-			return ResponseEntity.notFound().build();
+			throw e;
 		} catch (Exception e) {
-			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+			throw new InternalServerException(e);
 		}
 	}
 	

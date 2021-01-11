@@ -32,11 +32,11 @@
   		<groupId>javax.servlet</groupId>
   		<artifactId>jstl</artifactId>
   	</dependency>
-  </dependencies>
-  <dependency>
+  	<dependency>
   		<groupId>org.springframework.boot</groupId>
   		<artifactId>spring-boot-starter-thymeleaf</artifactId> <!-- jsp'ye alternatif template engine -->
   	</dependency>
+  </dependencies>
   
   <properties>
   	<java.version>1.8</java.version>

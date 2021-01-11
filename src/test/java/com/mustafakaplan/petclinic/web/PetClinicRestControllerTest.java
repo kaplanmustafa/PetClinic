@@ -1,5 +1,9 @@
 package com.mustafakaplan.petclinic.web;
 
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Before;
@@ -26,5 +30,35 @@ public class PetClinicRestControllerTest {
 		
 		MatcherAssert.assertThat(response.getStatusCodeValue(), Matchers.equalTo(200));
 		MatcherAssert.assertThat(response.getBody().getFirstName(), Matchers.equalTo("Ad5"));
+	}
+	
+	@Test
+	public void testGetOwnersByLastName() {
+		
+		@SuppressWarnings("rawtypes")
+		ResponseEntity<List> response = restTemplate.getForEntity("http://localhost:8081/rest/owner?ln=Soyad5", List.class);
+		
+		MatcherAssert.assertThat(response.getStatusCodeValue(), Matchers.equalTo(200));
+		
+		@SuppressWarnings("unchecked")
+		List<Map<String, String>> body = response.getBody();
+		List<String> firstNames = body.stream().map(item -> item.get("firstName")).collect(Collectors.toList());
+		
+		MatcherAssert.assertThat(firstNames, Matchers.containsInAnyOrder("Ad5"));
+	}
+	
+	@Test
+	public void testGetOwners() {
+		
+		@SuppressWarnings("rawtypes")
+		ResponseEntity<List> response = restTemplate.getForEntity("http://localhost:8081/rest/owners", List.class);
+		
+		MatcherAssert.assertThat(response.getStatusCodeValue(), Matchers.equalTo(200));
+		
+		@SuppressWarnings("unchecked")
+		List<Map<String, String>> body = response.getBody();
+		List<String> firstNames = body.stream().map(item -> item.get("firstName")).collect(Collectors.toList());
+		
+		MatcherAssert.assertThat(firstNames, Matchers.containsInAnyOrder("Ad1", "Ad2", "Ad3", "Ad4", "Ad5", "Ad6", "Ad7", "Ad8", "Ad9", "Ad10"));
 	}
 }

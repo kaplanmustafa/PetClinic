@@ -36,6 +36,21 @@
   		<groupId>org.springframework.boot</groupId>
   		<artifactId>spring-boot-starter-thymeleaf</artifactId> <!-- jsp'ye alternatif template engine -->
   	</dependency>
+  	<dependency>
+  		<groupId>junit</groupId>
+  		<artifactId>junit</artifactId> 
+  		<scope>test</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.hamcrest</groupId>
+  		<artifactId>hamcrest-library</artifactId> 
+  		<scope>test</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.springframework.boot</groupId>
+  		<artifactId>spring-boot-configuration-processor</artifactId>
+  		<optional>true</optional>
+  	</dependency>
   </dependencies>
   
   <properties>

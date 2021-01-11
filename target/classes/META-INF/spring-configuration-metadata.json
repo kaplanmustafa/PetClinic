@@ -1,0 +1,17 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.mustafakaplan.petclinic.PetClinicProperties",
+      "name": "petclinic",
+      "type": "com.mustafakaplan.petclinic.PetClinicProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.mustafakaplan.petclinic.PetClinicProperties",
+      "name": "petclinic.display-owners-with-pets",
+      "type": "java.lang.Boolean"
+    }
+  ]
+}

@@ -3,14 +3,31 @@ package com.mustafakaplan.petclinic.model;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "t_owner")
 public class Owner {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "petClinicSeqGen")
+	@SequenceGenerator(name = "petClinicSeqGen", sequenceName = "petclinic_sequence")
 	private Long id;
 	
+	@Column(name = "first_name")
 	private String firstName;
 	
+	@Column(name = "last_name")
 	private String lastName;
 	
+	@OneToMany(mappedBy = "owner")
 	private Set<Pet> pets = new HashSet<>();
 
 	public Long getId() {

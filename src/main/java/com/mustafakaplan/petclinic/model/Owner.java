@@ -12,6 +12,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "t_owner")
 public class Owner {
@@ -54,6 +56,7 @@ public class Owner {
 		this.lastName = lastName;
 	}
 
+	@JsonIgnore
 	public Set<Pet> getPets() {
 		return pets;
 	}
